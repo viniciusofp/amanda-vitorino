@@ -33,7 +33,7 @@ export default function StackingCards({ stackingCards }: StackingCardsProps) {
       className="container-padding relative"
       style={{ height: `calc(${items}*66svh)` }}
     >
-      <div className="container-padding bg-mix-multiply bg-petroleo sticky top-0 z-2 grid min-h-dvh items-center gap-4 overflow-hidden p-8 text-white md:gap-12 lg:flex lg:justify-center">
+      <div className="container-padding bg-mix-multiply bg-petroleo sticky top-0 z-2 grid min-h-dvh items-center gap-4 overflow-hidden p-8 pt-16 text-white md:gap-12 lg:flex lg:justify-center">
         <div className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full bg-[url('/dot-grid.webp')] bg-repeat mix-blend-multiply"></div>
         <div className="md:1/2 relative z-3 max-w-150 shrink lg:w-1/3 xl:w-full">
           <motion.h2
@@ -41,7 +41,7 @@ export default function StackingCards({ stackingCards }: StackingCardsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-creme mb-4 font-serif text-[clamp(2.25rem,3svw,3rem)] leading-none tracking-tight text-balance sm:mb-8"
+            className="text-creme mb-4 font-serif text-[clamp(1.8rem,3svw,3rem)] leading-none tracking-tight text-balance sm:mb-8"
           >
             {stackingCards.headline}
           </motion.h2>

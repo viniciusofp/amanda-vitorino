@@ -63,7 +63,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <div className="grid md:flex">
         <Sidebar info={info} />
         <main className="w-full">
-          <section className="bg-creme min-h-min w-full p-8 pb-24 md:h-[calc(100svh-3rem)]">
+          <section className="bg-creme min-h-min w-full p-8 pb-20 md:h-[calc(100svh-3rem)]">
             <h2 className="text-petroleo mb-8 font-serif text-[clamp(2.5rem,4svw,4rem)] leading-[1.1] tracking-tight text-balance lg:max-w-5/6">
               {home.hero?.headline}
             </h2>
@@ -72,7 +72,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </div>
 
             <Link href="/about" className="group relative block w-fit">
-              <div className="pointer-events-none absolute top-0 left-0 z-1 h-full w-0 py-6 duration-300 ease-[cubic-bezier(.06,.71,.28,.99)] group-hover:w-full">
+              <div className="pointer-events-none absolute top-0 left-0 z-1 hidden h-full w-0 py-6 duration-300 ease-[cubic-bezier(.06,.71,.28,.99)] group-hover:w-full sm:block">
                 <div className="h-full w-full rounded-xs bg-white shadow-sm [clip-path:polygon(0_0,97%_0,100%_50%,97%_100%,0_100%)]"></div>
               </div>
               <div className="relative z-2 grid w-fit items-center gap-8 sm:flex">
@@ -112,13 +112,13 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </section> */}
           <StackingCards stackingCards={home.stackingCards} />
           <TargetAudience />
-          <section className="flex min-h-svh items-center justify-center bg-white p-8">
+          <section className="flex min-h-svh items-center bg-white p-8">
             <div id="contact" className="">
-              <h1 className="text-petroleo mb-4 text-center font-serif text-[clamp(2.5rem,4svw,4rem)] leading-[1.1] tracking-tight">
+              <h1 className="text-petroleo mb-4 font-serif text-[clamp(2.5rem,4svw,4rem)] leading-[1.1] tracking-tight">
                 Vamos conversar?
               </h1>
 
-              <div className="prose-lg lg:prose-xl mx-auto mb-16 text-center leading-relaxed! text-pretty opacity-80 lg:max-w-5/6">
+              <div className="prose-lg lg:prose-xl mb-16 leading-relaxed! text-pretty opacity-80 lg:max-w-5/6 lg:text-balance">
                 <p>
                   Se sua prefeitura, órgão público ou mandato busca apoio para
                   estruturar políticas públicas, qualificar processos
@@ -126,7 +126,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   segurança jurídica, vamos conversar.
                 </p>
               </div>
-              <div className="grid items-center justify-center gap-3 text-center text-sm sm:text-xl lg:text-2xl">
+              <div className="grid gap-3 text-sm sm:text-xl lg:text-2xl">
                 <p>11 976970327</p>
                 <p>contato@vitorinomeloadvg.com.br</p>
               </div>

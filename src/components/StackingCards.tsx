@@ -112,7 +112,7 @@ const Card = ({ card, progress, index, total }: CardProps) => {
         />
       </div>
 
-      <div className="prose-sm max-w-prose leading-normal! tracking-wide text-balance">
+      <div className="sm:prose-sm max-w-prose text-xs leading-normal! tracking-wide text-balance">
         <CustomRichText data={card.text as any} />
       </div>
     </motion.div>

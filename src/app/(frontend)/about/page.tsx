@@ -30,19 +30,19 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <section className="flex min-h-[calc(100svh-160px)] items-center justify-center p-4 lg:p-6 xl:p-8 2xl:p-10">
       <div className="grid items-center gap-8 md:flex">
-        {home.img ? (
-          <div className="w-sm max-w-full min-w-xs">
-            <Link href="/">
-              <ViewTransition name={"foto1"}>
-                <img
-                  src={(home.img as Media).url || ""}
-                  className="w-full rounded-xs"
-                  alt={(home.img as Media).alt}
-                />
-              </ViewTransition>
-            </Link>
-          </div>
-        ) : null}
+        <div className="w-sm max-w-full min-w-xs">
+          <Link href="/">
+            <ViewTransition name={"foto1"}>
+              <img
+                src={"/amanda.jpg"}
+                alt={
+                  "Amanda Vitorino - Advogada - Consultoria Jurídica e Estratégica em Políticas Públicas"
+                }
+                className="w-full rounded-xs"
+              />
+            </ViewTransition>
+          </Link>
+        </div>
         <CustomRichText data={home.about} className="prose text-pretty" />
       </div>
     </section>

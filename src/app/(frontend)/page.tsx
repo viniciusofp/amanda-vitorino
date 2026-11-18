@@ -75,18 +75,18 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 <div className="h-full w-full rounded-xs bg-white shadow-sm [clip-path:polygon(0_0,97%_0,100%_50%,97%_100%,0_100%)]"></div>
               </div>
               <div className="relative z-2 flex w-fit items-center gap-8">
-                {home.about?.img ? (
-                  <div className="border-creme-200 bg-creme relative w-36 shrink-0 overflow-hidden rounded-xs border p-1.5 lg:w-40">
-                    <div className="bg-creme absolute top-0 left-0 z-2 h-full w-full mix-blend-color duration-150 group-hover:opacity-0"></div>
-                    <ViewTransition name={"foto1"}>
-                      <img
-                        src={(home.about?.img as Media).url || ""}
-                        className="w-full saturate-0 duration-150 group-hover:saturate-100"
-                        alt={(home.about?.img as Media).alt}
-                      />
-                    </ViewTransition>
-                  </div>
-                ) : null}
+                <div className="border-creme-200 bg-creme relative w-36 shrink-0 overflow-hidden rounded-xs border p-1.5 lg:w-40">
+                  <div className="bg-creme absolute top-0 left-0 z-2 h-full w-full mix-blend-color duration-150 group-hover:opacity-0"></div>
+                  <ViewTransition name={"foto1"}>
+                    <img
+                      src={"/amanda.jpg"}
+                      alt={
+                        "Amanda Vitorino - Advogada - Consultoria Jurídica e Estratégica em Políticas Públicas"
+                      }
+                      className="w-full saturate-0 duration-150 group-hover:saturate-100"
+                    />
+                  </ViewTransition>
+                </div>
                 <div className="grid w-fit gap-3 text-sm leading-normal">
                   <p className="text-creme-800 max-w-prose text-pretty">
                     {home.about?.shortBio}

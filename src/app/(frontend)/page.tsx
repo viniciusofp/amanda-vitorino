@@ -1,19 +1,15 @@
-import { headers as getHeaders } from "next/headers";
-
 import config from "@/payload.config";
 import { getPayload } from "payload";
 
+import { CustomRichText } from "@/components/CustomRichText";
+import HomeMarquee from "@/components/HomeMarquee";
+import Sidebar from "@/components/Sidebar";
+import StackingCards from "@/components/StackingCards";
+import { Media } from "@/payload-types";
+import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { CustomRichText } from "@/components/CustomRichText";
-import Marquee from "react-fast-marquee";
-import { Media } from "@/payload-types";
 import { ViewTransition } from "react";
-import { ArrowRight } from "lucide-react";
-import StackingCards from "@/components/StackingCards";
-import Sidebar from "@/components/Sidebar";
-import React from "react";
-import HomeMarquee from "@/components/HomeMarquee";
 
 export type BlogPageProps = {
   searchParams: Promise<{ page: string; preview: string }>;
@@ -32,9 +28,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const payloadConfig = await config;
   const payload = await getPayload({ config: payloadConfig });
-
-  const headers = await getHeaders();
-  const { user } = await payload.auth({ headers });
 
   const { page, preview } = await searchParams;
   // const { docs, totalPages, nextPage, prevPage } = await payload.find({

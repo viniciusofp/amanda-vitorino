@@ -107,7 +107,6 @@ export default async function BlogPost({
         </h1>
         {post.metadata ? (
           <div className="meta flex flex-col flex-wrap gap-y-3 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:gap-x-12">
-            
             {post.metadata.type ? (
               <div className="">
                 <p className="mb-px font-mono text-[10px] tracking-wider text-stone-400 uppercase">
@@ -118,12 +117,10 @@ export default async function BlogPost({
                 </p>
               </div>
             ) : null}
-           
           </div>
         ) : null}
 
         {post.content ? <ExpandableContent content={post.content} /> : null}
-   
       </div>
       {/* <About /> */}
     </div>

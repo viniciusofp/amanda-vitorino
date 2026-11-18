@@ -10,6 +10,7 @@ import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ViewTransition } from "react";
+import TargetAudience from "@/components/TargetAudience";
 
 export type BlogPageProps = {
   searchParams: Promise<{ page: string; preview: string }>;
@@ -110,50 +111,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </h2>
           </section> */}
           <StackingCards stackingCards={home.stackingCards} />
-          <section className="bg-creme w-full p-8 py-16">
-            <div className="mb-6 flex items-center gap-3">
-              <div className="bg-rosa border-rosa-300 h-2 w-2 rounded-full border"></div>
-              <h2 className="text-sm leading-none font-medium tracking-widest uppercase">
-                Público-alvo
-              </h2>
-            </div>
-
-            <p className="max-w-prose text-2xl leading-normal text-pretty lg:w-5/6 lg:text-3xl">
-              Soluções para governança pública começam com a compreensão dos
-              desafios e das oportunidades de cada instituição.
-            </p>
-            <div className="divide-petroleo/10 mt-8 grid divide-y">
-              <div className="py-8">
-                <h3 className="mb-2 text-lg leading-[1.2] font-bold text-balance">
-                  Prefeituras e Secretarias Municipais
-                </h3>
-                <p className="max-w-prose text-pretty">
-                  Soluções jurídicas e estratégicas para formular, implementar e
-                  aprimorar políticas públicas, com foco em capacidade
-                  institucional.
-                </p>
-              </div>
-              <div className="py-8">
-                <h3 className="mb-2 text-lg leading-[1.2] font-bold text-balance">
-                  Câmaras Municipais e Mandatos
-                </h3>
-                <p className="max-w-prose text-pretty">
-                  Apoio técnico para construir soluções legislativas alinhadas
-                  às demandas sociais e aos princípios da boa governança.
-                </p>
-              </div>
-              <div className="py-8">
-                <h3 className="mb-2 text-lg leading-[1.2] font-bold text-balance">
-                  Cultura e Fomento Público
-                </h3>
-                <p className="max-w-prose text-pretty">
-                  Estruturação de programas e instrumentos de fomento para
-                  promover segurança jurídica, eficiência e boa execução de
-                  recursos públicos.
-                </p>
-              </div>
-            </div>
-          </section>
+          <TargetAudience />
           <section className="flex min-h-svh items-center justify-center bg-white p-8">
             <div id="contact" className="">
               <h1 className="text-petroleo mb-4 text-center font-serif text-[clamp(2.5rem,4svw,4rem)] leading-[1.1] tracking-tight">

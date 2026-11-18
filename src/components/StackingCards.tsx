@@ -30,11 +30,12 @@ export default function StackingCards({ stackingCards }: StackingCardsProps) {
   return (
     <div
       ref={ref}
-      className="container-padding"
+      className="container-padding relative"
       style={{ height: `calc(${items}*66svh)` }}
     >
-      <div className="container-padding bg-mix-multiply bg-petroleo sticky top-0 grid min-h-dvh items-center gap-4 overflow-hidden bg-[url('/dot-grid.webp')] bg-repeat p-8 text-white bg-blend-multiply md:gap-12 lg:flex lg:justify-center">
-        <div className="md:1/2 max-w-150 shrink lg:w-1/3 xl:w-full">
+      <div className="container-padding bg-mix-multiply bg-petroleo sticky top-0 z-2 grid min-h-dvh items-center gap-4 overflow-hidden p-8 text-white md:gap-12 lg:flex lg:justify-center">
+        <div className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full bg-[url('/dot-grid.webp')] bg-repeat mix-blend-multiply"></div>
+        <div className="md:1/2 relative z-3 max-w-150 shrink lg:w-1/3 xl:w-full">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +55,7 @@ export default function StackingCards({ stackingCards }: StackingCardsProps) {
             <CustomRichText data={stackingCards.lead as any} />
           </motion.div>
         </div>
-        <div className="cardstack relative h-full min-h-64 w-full md:mt-0 lg:min-w-80">
+        <div className="cardstack relative z-3 h-full min-h-64 w-full md:mt-0 lg:min-w-80">
           {stackingCards?.cards?.map((card: any, index: number) => {
             return (
               <Card

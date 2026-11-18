@@ -75,7 +75,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               <div className="pointer-events-none absolute top-0 left-0 z-1 h-full w-0 py-6 duration-300 ease-[cubic-bezier(.06,.71,.28,.99)] group-hover:w-full">
                 <div className="h-full w-full rounded-xs bg-white shadow-sm [clip-path:polygon(0_0,97%_0,100%_50%,97%_100%,0_100%)]"></div>
               </div>
-              <div className="relative z-2 flex w-fit items-center gap-8">
+              <div className="relative z-2 grid w-fit items-center gap-8 sm:flex">
                 <div className="border-creme-200 bg-creme relative w-36 shrink-0 overflow-hidden rounded-xs border p-1.5 lg:w-40">
                   <div className="bg-creme absolute top-0 left-0 z-2 h-full w-full mix-blend-color duration-150 group-hover:opacity-0"></div>
                   <ViewTransition name={"foto1"}>
@@ -126,7 +126,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   segurança jurídica, vamos conversar.
                 </p>
               </div>
-              <div className="grid items-center justify-center gap-3 text-center text-2xl lg:text-3xl">
+              <div className="grid items-center justify-center gap-3 text-center text-sm sm:text-xl lg:text-2xl">
                 <p>11 976970327</p>
                 <p>contato@vitorinomeloadvg.com.br</p>
               </div>
